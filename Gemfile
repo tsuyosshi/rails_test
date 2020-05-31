@@ -6,7 +6,10 @@ ruby '2.6.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+# 開発・テスト環境ではSQLite3を使う
+gem 'sqlite3', groups: %w(test development), require: false
+# 本番環境ではPostgresqlを使う
+gem 'pg', groups: %w(production), require: false
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
