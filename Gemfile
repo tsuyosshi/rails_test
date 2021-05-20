@@ -11,7 +11,7 @@ gem 'sqlite3', groups: %w(test development), require: false
 # 本番環境ではPostgresqlを使う
 gem 'pg', groups: %w(production), require: false
 # Use Puma as the app server
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
